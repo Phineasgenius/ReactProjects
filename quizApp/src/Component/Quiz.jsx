@@ -29,6 +29,21 @@ function Quiz() {
       question: "What is capital of France?",
       options: ["London", "Paris", "Berlin", "Madrid"],
       answer: "Paris"
+    },
+    {
+      question: "Which planet is known as the Red Planet?",
+      options: ["Venus", "Mars", "Jupiter", "Saturn"],
+      answer: "Mars"
+    },
+    {
+      question: "What is the largest ocean on Earth?",
+      options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+      answer: "Pacific Ocean"
+    },
+    {
+      question: "Who painted the Mona Lisa?",
+      options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo"],
+      answer: "Leonardo da Vinci"
     }
   ];
 
