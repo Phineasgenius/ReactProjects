@@ -1,0 +1,51 @@
+.weather-card {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #f8fbff;
+  border: 1px solid #c2daf7;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.weather-card h3 {
+  color: #003D82;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+}
+
+.weather-card form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.weather-card .form-control {
+  flex: 1;
+  border: 1px solid #a6c8e8;
+}
+
+.weather-card .btn-primary {
+  background: #003D82;
+  border: none;
+}
+
+.weather-card p {
+  margin: 0.28rem 0;
+  color: #1f3a93;
+}
+
+.weather-card .labels {
+  font-size: 0.85rem;
+  color: #486587;
+}
+
+.weather-card .text-danger {
+  color: #a91914 !important;
+}
+
+.weather-card .text-warning {
+  color: #7d6600 !important;
+}
+

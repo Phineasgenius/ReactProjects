@@ -18,6 +18,9 @@ function Navbar({ currentPage, onNavigate }) {
           <li className={currentPage === 'quiz' ? 'active' : ''}>
             <button onClick={() => onNavigate('quiz')}>Quiz</button>
           </li>
+          <li className={currentPage === 'weather' ? 'active' : ''}>
+            <button onClick={() => onNavigate('weather')}>Weather</button>
+          </li>
         </ul>
       </div>
     </nav>
