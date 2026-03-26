@@ -11,26 +11,31 @@ body, html {
 }
 
 #root {
+  width: 100%;
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .quiz-card {
-  width: min(95vw, 520px);
+  width: 100%;
+  max-width: 700px;
   background: #fff;
   border-radius: 14px;
   padding: 24px;
   margin: 30px auto;
   box-shadow: 0 12px 30px rgba(7, 12, 26, 0.14);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 h1 {
   margin-top: 0;
   margin-bottom: 16px;
   text-align: center;
-  color: #1f3a93;
+  color: #003D82;
   font-size: 2rem;
 }
 
@@ -60,9 +65,9 @@ li:hover {
 }
 
 .selected {
-  background: #0078cc;
+  background: #007BA7;
   color: #fff;
-  border-color: #005aa8;
+  border-color: #005178;
 }
 
 button {
@@ -74,12 +79,12 @@ button {
   font-weight: 700;
   cursor: pointer;
   color: #fff;
-  background: #1f3a93;
+  background: #003D82;
   transition: background 0.2s ease;
 }
 
 button:hover:not(:disabled) {
-  background: #17306f;
+  background: #002547;
 }
 
 button:disabled {
@@ -92,5 +97,55 @@ button:disabled {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #1f3a93;
+  color: #003D82;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.button-group button {
+  flex: 1;
+}
+
+.next-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+  background: #003D82;
+  transition: background 0.2s ease;
+}
+
+.next-btn:hover:not(:disabled) {
+  background: #002547;
+}
+
+.next-btn:disabled {
+  background: #a7b2c9;
+  cursor: not-allowed;
+}
+
+.restart-btn {
+  background: #007BA7;
+  color: white;
+}
+
+.restart-btn:hover {
+  background: #005178;
+}
+
+.home-btn {
+  background: #0891B2;
+  color: white;
+}
+
+.home-btn:hover {
+  background: #067088;
 }

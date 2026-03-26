@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Quiz.css';
 import QuestionList from './QuestionList';
 
-function Quiz() {
+function Quiz({ onNavigate }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentAnswer, setCurrentAnswer] = useState(null);
   const [score, setScore] = useState(0);
@@ -17,6 +17,12 @@ function Quiz() {
     }
     setCurrentQuestionIndex(currentQuestionIndex + 1);
     setCurrentAnswer(null);
+  };
+
+  const handleRestartQuiz = () => {
+    setCurrentQuestionIndex(0);
+    setCurrentAnswer(null);
+    setScore(0);
   };
 
   const questions = [
@@ -53,10 +59,16 @@ function Quiz() {
       {currentQuestionIndex < questions.length ? (
         <>
           <QuestionList question={questions[currentQuestionIndex]} handleClick={handleClick} currentAnswer={currentAnswer} />
-          <button onClick={handleNextQuestion} disabled={!currentAnswer}>Next Question</button>
+          <button className="next-btn" onClick={handleNextQuestion} disabled={!currentAnswer}>Next Question</button>
         </>
       ) : (
-        <div className="score">Quiz Complete! Your score: {score}</div>
+        <div>
+          <div className="score">Quiz Complete! Your score: {score}/{questions.length}</div>
+          <div className="button-group">
+            <button className="restart-btn" onClick={handleRestartQuiz}>Restart Quiz</button>
+            <button className="home-btn" onClick={() => onNavigate('home')}>Back to Home</button>
+          </div>
+        </div>
       )}
     </div>
   );
